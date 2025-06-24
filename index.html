@@ -4,14 +4,58 @@
   <meta charset="UTF-8">
   <title>NES Online</title>
   <style>
-    canvas { border: 1px solid #000; }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #000117;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    input[type="file"] {
+      margin-bottom: 20px;
+      padding: 8px;
+      color: white;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: none;
+      border: 1px solid white;
+    }
+
+    canvas {
+      border: 3px solid white;
+      width: 512px;
+      height: 480px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      margin-bottom: 10px;
+    }
+
+    a.source-link {
+      color: white;
+      text-decoration: underline;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    a.source-link:hover, a.source-link:visited, a.source-link:active {
+      color: white;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <h1>NES Online</h1>
   <input type="file" id="romInput" />
-  <br><br>
   <canvas id="nes-canvas" width="256" height="240"></canvas>
+  <a href="https://github.com/ZZZMario/nes-online" target="_blank" class="source-link">View Source Code</a>
 
   <script src="jsnes.min.js"></script>
   <script src="main.js"></script>
